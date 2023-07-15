@@ -1,0 +1,30 @@
+<div class="content">
+    <form [formGroup]="Addfood" (ngSubmit)="goto2(Addfood.value)">
+
+        <mat-form-field class="example-full-width me-4e">
+            <mat-label>MobileNumber</mat-label>
+            <span matPrefix>+1 &nbsp;</span>
+            <input type="number" matInput placeholder="555-555-1234" formControlName="mobileno">
+            <mat-icon matSuffix>mode_edit</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>traineno</mat-label>
+            <input matInput formControlName="traineno">
+        </mat-form-field> <br>
+
+        <mat-form-field appearance="fill">
+            <input matInput placeholder="enter your dob" [matDatepicker]="picker" formControlName="date">
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <!-- <br> <mat-form-field >
+            <mat-label>boardingStation</mat-label>
+            <input matInput formControlName="boardingStation">
+        </mat-form-field> -->
+       
+
+        <div> <button mat-raised-button>Basic</button></div>
+    </form>
+
+</div>

@@ -1,0 +1,32 @@
+<h1>wdw</h1>
+<div class="container">
+    <form [formGroup]="Addfood2" (ngSubmit)="goto3(Addfood2.value)">
+        <mat-form-field>
+            <mat-label>traineno</mat-label>
+            <input matInput formControlName="traineno">
+        </mat-form-field>
+
+        <mat-form-field style="display: none;">
+            <mat-label>Input</mat-label>
+            <input matInput formControlName="mobileno">
+        </mat-form-field>
+
+        <mat-form-field style="display: none;">
+            <mat-label>Input</mat-label>
+            <input matInput formControlName="date">
+        </mat-form-field>
+
+        <mat-form-field  formControlName="boardingStation">
+            <mat-label>Favorite food</mat-label>
+            <mat-select>
+                <mat-option>
+                    haldwani
+                </mat-option>
+                <mat-option>
+                    dehradun
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div> <button mat-raised-button type="submit">Next</button></div>
+    </form>
+</div>

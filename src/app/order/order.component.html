@@ -1,0 +1,31 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td type="mat-radio-button"> <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button *ngFor="let item of fooddetail">
+                        <span>{{item.foodname}}</span><br> </mat-radio-button>
+                    </mat-radio-group></td>
+                <td type="mat-radio-button">Otto</td>
+                <td type="mat-radio-button">@mdo</td>
+            </tr>
+        </tbody>
+    </table>
+    <mat-radio-group aria-label="Select an option">
+        <mat-radio-button *ngFor="let item of fooddetail">
+            <span>{{item.foodname}}</span><br>
+            <span>{{item.description}}</span><br>
+            <span>{{item.price}}</span>
+        </mat-radio-button>
+    </mat-radio-group>
+
+</div>
